@@ -1,7 +1,25 @@
 import lms_masterdata
 import lms_engine
+import sys
+"""
+# Read input from user using input
+lms_CustName = input("Enter Customer Name: ")
+lms_CreditScore = input("Enter the Credit Score: ")
+lms_ReqLoanAmt = input("Enter the Loan Amount: ")
 
+# Function call
+lms_engine.engine(lms_masterdata.lms_masterdata,lms_CustName,int(lms_CreditScore),int(lms_ReqLoanAmt))
+"""
+# Sys Arg input
+customer_data = sys.argv
+lms_CustName = customer_data[1]
+lms_CreditScore = customer_data[2]
+lms_ReqLoanAmt = customer_data[3]
 
+# Function call
+lms_engine.engine(lms_masterdata.lms_masterdata,lms_CustName,int(lms_CreditScore),int(lms_ReqLoanAmt))
+
+"""
 # Unit Test for one customer
 l_CustName="Alex"
 l_CustCreditScore=333
@@ -42,3 +60,4 @@ l_CustReqLoanAmount=23500
 # Function call
 lms_engine.engine(lms_masterdata.lms_masterdata,l_CustName,l_CustCreditScore,l_CustReqLoanAmount)
 
+"""
