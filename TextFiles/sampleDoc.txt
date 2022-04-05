@@ -1,4 +1,0 @@
-This is a test Document.
-Learn how to read text file using Python.
-Happy Learning.
-I love programming.
