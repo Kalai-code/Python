@@ -23,12 +23,26 @@ class Car:
     def increment_odometer(self,miles):
         self.odometer_reading += miles
         
+class Battery:
+    """A simple attempt to model a battery for an electric car."""
+    
+    def __init__(self, battery_size = 75):
+        """Initialize the battery's attributes."""
+        self.battery_size = battery_size
+    
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kwh battery.")
+        
 class ElectricCar(Car):
     """Represents the child class"""
     
     def __init__(self,make,model,year):
         """Initialize the attributes of the parent class."""
         super().__init__(make,model,year)
+        self.battery = Battery()
+        
+    
         
 my_tesla = ElectricCar("tesla","model s",2019)
 print(my_tesla.get_descriptive_name())
@@ -37,4 +51,5 @@ my_tesla.update_odometer(100)
 my_tesla.read_odometer()
 my_tesla.update_odometer(50)
 my_tesla.increment_odometer(80)
-my_tesla.read_odometer()
+my_tesla.read_odometer() 
+my_tesla.battery.describe_battery()
