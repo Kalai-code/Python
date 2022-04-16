@@ -36,6 +36,7 @@ def Bill_Details(json_file,fileName):
         # Functions to write the processed files
         write_Detailprocessedfile(filepath+"_billDetails.json",billDetail_json)
         write_totalprocessedfile(filepath+"_billTotal.json",billTotal_json)
+        # Move the processed files to Archive folder
         move_toArchiveFolder(file_path_read+fileName,file_path_archive+fileName)
     
 def get_LineTotal(unitPrice,value):
