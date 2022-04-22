@@ -21,10 +21,15 @@ maxNum = max(numList) # returns the maximum number from the list
 print("Minimum:",maxNum)
 
 lenList =  len(numList)
-print("Length:",lenList)
+print("Length:",lenList) # returns the length of the list
 
-num = ''.join(numList)
-print(num)
+#code to convert int list to interger
+# first convert int list to string and then convert to integer
+
+intNum = ''.join(map(str,numList)) # converts int list to string
+intNum = int(intNum) # convert to integer
+print(intNum)
+
 
 
 text = "hello"
@@ -33,3 +38,8 @@ print(txtList)
 
 txt = ''.join(txtList) # joins the list and returns string as output
 print(txt)
+
+
+# for loop to increment the number by 2
+for i in range(0, 10, 2):
+    print(i)
