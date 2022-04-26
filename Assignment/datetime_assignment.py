@@ -55,7 +55,7 @@ print("DateTime Info in Zone 1:",tz3_date)
 print("Time Difference:",ThirdZoneDiff)
 
 mininum = min(tz1_date,tz2_date,tz3_date)
-print("Sun rises first in:", mininum)
+print("Sun rises first here:", mininum)
 """
 l_date_time = datetime.datetime.strptime(str_datetime, '%Y-%m-%d %H:%M:%S')
 # Assign current Date to EST TimeZone
