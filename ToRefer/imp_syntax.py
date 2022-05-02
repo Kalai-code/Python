@@ -43,3 +43,21 @@ print(txt)
 # for loop to increment the number by 2
 for i in range(0, 10, 2):
     print(i)
+    
+#code to convert character to number
+text = "itsmycode"
+
+# elegant way using list comprehension
+num_list = [ord(x) - 96 for x in text]
+
+# print the converted letters as numbers in list
+print("After converting letters to numbers", num_list)
+
+#code to convert number to character
+print(chr(65)) # prints the character 'A'
+
+# code to reverse a string
+print("Hello"[::-1]) # prints olleH
+
+# code to get reminder and quotient
+quotient, reminder = divmod(12,6) # returns quotient = 2, reminder = 0
