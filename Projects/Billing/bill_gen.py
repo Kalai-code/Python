@@ -27,7 +27,7 @@ def getQty():
     return random.randint(1,20)
 
 # change the file path when required
-l_bills_path = "C:\\Kalai\\Python\\Projects\\Billing\\Bills\\"
+l_bills_path = "C:\\PythonLearning\\Projects\\Billing\\Bills\\"
 
 while True:
     l_bill_id = getBillID()
