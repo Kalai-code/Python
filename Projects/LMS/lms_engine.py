@@ -1,16 +1,18 @@
 class LMSEngine:
     """Class to check whether the customer is eligible for the loan or not"""
     
-    def __init__(self,i_masterdata,i_cust_name,i_cust_creditscore,i_cust_loan_amt):
+    def __init__(self,i_masterdata,i_cust_name,i_cust_creditscore,i_cust_loan_amt,log):
         self.i_masterdata = i_masterdata
         self.i_cust_name = i_cust_name
         self.i_cust_creditscore = i_cust_creditscore
         self.i_cust_loan_amt = i_cust_loan_amt
+        self.log = log
     
     # changed the code to write output into a text file      
     def engine(self):
         """ Function to check whether the customer is eligible for the loan or not """
         eligible = False
+        self.log.info("Processing Step: Data is being processed to check eligibility for " + self.i_cust_name)
         for c in self.i_masterdata:
             if self.i_cust_creditscore>= c["cs_start"] and self.i_cust_creditscore<= c["cs_end"] and self.i_cust_loan_amt>=c["loan_amt_start"]and self.i_cust_loan_amt<c["loan_amt_end"]:
                eligible = True
@@ -26,6 +28,7 @@ class LMSEngine:
                file_open.close()
                print("The details has been sucessfully entered in a text file")
         if eligible != True:
+            self.log.info("Processing Step: Credit score is too less to provide the loan for " + self.i_cust_name)
             print(f"\n Hi {self.i_cust_name}, your credit score is too less to provide the loan. \n Please improve the credit score and then apply for the loan. \n Thank you")
         
     

@@ -1,6 +1,7 @@
 import lms_masterdataDB
 from lms_engine import LMSEngine
-import sys
+import sys, logging
+import datetime
 
 
 """
@@ -13,6 +14,20 @@ lms_engine = LMSEngine(lms_masterdataDB.g_lkp_data,l_CustName,l_CustCreditScore,
 # Function call for one customer
 lms_engine.engine()
 """
+today = datetime.datetime.today()
+l_log_file_name = "logPython_"+today.strftime("%d%b%y%H%M%S")+".log"
+
+# STEP 1. Create a LOGGING Object
+tiFileLog = logging.getLogger('LogLMS-file')
+
+# STEP 2. Create a Log File Handler, the log messages will be created in this file
+LogFile = logging.FileHandler('C:\\PythonLearning\\Projects\\LMS\\Logs\\' +l_log_file_name)
+
+# STEP 3. Add the handler to the logging object
+tiFileLog.addHandler(LogFile)
+
+# STEP 4. Set Log Level
+tiFileLog.setLevel(logging.INFO)
 
 # Unit Test for few customers who are eligible and not eligible for the loan
 customers  = [{ "CustName":"Alan"
@@ -31,12 +46,13 @@ customers  = [{ "CustName":"Alan"
   ,"CustCreditScore":333
   ,"CustReqLoanAmount":23500}  
   ]
- 
+
+tiFileLog.info("Processing Step: Processing started")
 # loop through each customer and check if they are eligible for loan or not and return the output
 for c1 in customers:
-    lms_engine = LMSEngine(lms_masterdataDB.g_lkp_data,c1["CustName"],c1["CustCreditScore"],c1["CustReqLoanAmount"])
+    lms_engine = LMSEngine(lms_masterdataDB.g_lkp_data,c1["CustName"],c1["CustCreditScore"],c1["CustReqLoanAmount"],tiFileLog)
     lms_engine.engine()
-
+tiFileLog.info("Processing Step: Processing completed")
 """   
 # Unit Test for Customer who is not eligible for loan
 
