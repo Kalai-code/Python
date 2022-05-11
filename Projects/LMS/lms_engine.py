@@ -19,7 +19,7 @@ class LMSEngine:
                eli_duration = c["duration"]
                eli_interest = c["interest"]
                eli_totalamt = self.i_cust_loan_amt + (self.i_cust_loan_amt)*(c["interest"])/100
-               fileName = "C:\\PythonLearning\\Projects\\LMS\\Text_Files\\"+self.i_cust_name+".txt"
+               fileName = "C:\\Kalai\\Python\\Projects\\LMS\\Text_Files\\"+self.i_cust_name+".txt"
                file_open = open(fileName,'w')
                file_open.write("\nCongratulations " + self.i_cust_name+"!!! You are eligible for the loan\n")
                file_open.write("Duration for payment is: " + str(eli_duration) + "\n")

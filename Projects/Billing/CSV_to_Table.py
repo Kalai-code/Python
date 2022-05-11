@@ -6,7 +6,7 @@ import csv
 conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='123456', db='Billing')
 cursor = conn.cursor()
 
-csv_data = csv.reader(open('C:\\PythonLearning\\Projects\\Billing\\products.csv'))
+csv_data = csv.reader(open('C:\\Kalai\\Python\\Projects\\Billing\\products.csv'))
 next(csv_data)
 for row in csv_data:
     print(row)

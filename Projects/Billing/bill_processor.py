@@ -5,9 +5,9 @@ import glob
 import time, datetime
 import zipfile
 # File paths
-file_path_read = "C:\\PythonLearning\\Projects\\Billing\\Bills\\"
-file_path_error = "C:\\PythonLearning\\Projects\\Billing\\Error_bills\\"
-file_path_processed = "C:\\PythonLearning\\Projects\\Billing\\Processed_bills\\"
+file_path_read = "C:\\Kalai\\Python\\Projects\\Billing\\Bills\\"
+file_path_error = "C:\\Kalai\\Python\\Projects\\Billing\\Error_bills\\"
+file_path_processed = "C:\\Kalai\\Python\\Projects\\Billing\\Processed_bills\\"
 # make changes to database details when needed
 conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='123456', db='Billing')
 cursor = conn.cursor()
