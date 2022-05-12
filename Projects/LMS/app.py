@@ -21,7 +21,7 @@ l_log_file_name = "logPython_"+today.strftime("%d%b%y%H%M%S")+".log"
 tiFileLog = logging.getLogger('LogLMS-file')
 
 # STEP 2. Create a Log File Handler, the log messages will be created in this file
-LogFile = logging.FileHandler('C:\\PythonLearning\\Projects\\LMS\\Logs\\' +l_log_file_name)
+LogFile = logging.FileHandler('C:\\Kalai\\Python\\Projects\\LMS\\Logs\\' +l_log_file_name)
 
 # STEP 3. Add the handler to the logging object
 tiFileLog.addHandler(LogFile)

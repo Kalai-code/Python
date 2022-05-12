@@ -1,3 +1,7 @@
+create Database Billing;
+
+use Billing;
+
 delimiter $$
 
 CREATE TABLE `products` (
@@ -33,3 +37,6 @@ CREATE TABLE `bills` (
   PRIMARY KEY (`bill_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci$$
 
+select * from products;
+select count(*) from bills;
+select count(*) from billdetails;
