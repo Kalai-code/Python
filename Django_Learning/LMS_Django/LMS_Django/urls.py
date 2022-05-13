@@ -1,4 +1,4 @@
-"""myFirstProject URL Configuration
+"""LMS_Django URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -14,13 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include,path
-
+from django.urls import path,include
 
 urlpatterns = [
-    path('app_django_html_templates/', include('app_django_html_templates.urls')),
-    path('app_response_types/', include('app_response_types.urls')),
-    path('multiple_views/', include('app_multiple_view_files.urls')),
-    path('app_proj/', include('app_proj.urls')),
     path('admin/', admin.site.urls),
+    path('app_LMS/',include('app_LMS.urls')),
 ]
