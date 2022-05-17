@@ -1,0 +1,16 @@
+<!-- 
+    File Name: inheritance_caller_borders.html
+    Desc:      Rounded Borders to display data
+-->
+{% extends "template_inheritance_base.html" %}
+
+{% block content %}
+    {% for h,d in data %}
+    <div class="w3-panel w3-blue w3-border w3-round-xxlarge">
+    <p>{{h}}</p>
+    </div>
+    <div class="w3-panel w3-border w3-round-xxlarge">
+    <p>{{d}}</p>
+    </div>
+    {% endfor %}
+{% endblock %}
