@@ -1,0 +1,20 @@
+
+
+Forms (Dates, Passwords, Widgets)
+Data Grid
+Templates
+
+Static pages
+page Redirect
+Default page 404
+Upload
+Pass Data from DB to Forms
+
+tests.py  examples
+
+
+Git
+Django DockerCompose Tutorial Deployment
+    Static
+    With DB
+    
